@@ -1,0 +1,8 @@
+channels==3.0.4
+Django==3.2.5
+openpyxl==3.0.9
+pandas==1.4.2
+pdfkit==1.0.0
+pyecharts==1.9.1
+PyMySQL==1.0.2
+stripe==2.76.0

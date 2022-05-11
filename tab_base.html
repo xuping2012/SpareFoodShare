@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    
+</head>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'f0fe57474ad8486b909bc293cc19a382')">Number of Orders Per Day</button>
+            <button class="tablinks" onclick="showChart(event, 'c413be63169d4302aeb49cd823f63b9d')">Regional Quantity & Price</button>
+            <button class="tablinks" onclick="showChart(event, '4f5cf24cc06b4f40844380bed05d3691')">Distribution of Food Types</button>
+            <button class="tablinks" onclick="showChart(event, 'ef72ff0ce5ce4d2d8963629bafa328fc')">Quarterly Prices and Quantities</button>
+            <button class="tablinks" onclick="showChart(event, '5d02ba8d4ae648c9b77b91f2a3a00fa6')">Client Information Sheet</button>
+    </div>
+
+    <div class="box">
+                <div id="f0fe57474ad8486b909bc293cc19a382" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_f0fe57474ad8486b909bc293cc19a382 = echarts.init(
+            document.getElementById('f0fe57474ad8486b909bc293cc19a382'), 'white', {renderer: 'canvas'});
+        var option_f0fe57474ad8486b909bc293cc19a382 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Date",
+            "legendHoverLink": true,
+            "data": [
+                7,
+                5,
+                3,
+                4,
+                1,
+                3,
+                3,
+                1,
+                1,
+                3,
+                2,
+                1,
+                2,
+                4,
+                2,
+                3,
+                3,
+                4,
+                2,
+                3,
+                6,
+                4,
+                3,
+                2,
+                2,
+                5,
+                1,
+                3,
+                5,
+                3,
+                3,
+                2,
+                2,
+                2,
+                5,
+                6,
+                1,
+                5,
+                4,
+                2,
+                2,
+                1,
+                4,
+                4,
+                4,
+                3,
+                4,
+                1,
+                2,
+                5,
+                2,
+                4,
+                1,
+                2,
+                4,
+                2,
+                1,
+                4,
+                4,
+                1,
+                1,
+                1,
+                1,
+                3,
+                4,
+                1,
+                2,
+                3,
+                1,
+                3,
+                3,
+                2,
+                6,
+                1,
+                3,
+                1,
+                2,
+                2,
+                2,
+                4,
+                2,
+                2,
+                5,
+                6,
+                2,
+                3,
+                4,
+                5,
+                2,
+                4,
+                4,
+                2,
+                5,
+                1,
+                3,
+                2,
+                4,
+                1,
+                3,
+                4,
+                2,
+                3,
+                3,
+                1,
+                3,
+                3,
+                3,
+                3,
+                2,
+                1,
+                4,
+                4,
+                2,
+                2,
+                4,
+                1,
+                4,
+                7,
+                3,
+                1,
+                5,
+                8,
+                3,
+                5,
+                2,
+                5,
+                4,
+                1,
+                6,
+                2,
+                3,
+                3,
+                2,
+                4,
+                3,
+                3,
+                3,
+                8,
+                4,
+                3,
+                2,
+                2,
+                5,
+                1,
+                6,
+                3,
+                5,
+                3,
+                5,
+                2,
+                4,
+                3,
+                6,
+                1,
+                3,
+                1,
+                4,
+                4,
+                1,
+                3,
+                1,
+                4,
+                6,
+                6,
+                1,
+                2,
+                1,
+                3,
+                3,
+                2,
+                5,
+                2,
+                3,
+                3,
+                1,
+                1,
+                2,
+                1,
+                2,
+                5,
+                1,
+                2,
+                5,
+                1,
+                3,
+                1,
+                1,
+                4,
+                5,
+                2,
+                2,
+                5,
+                1,
+                2,
+                2,
+                6,
+                2,
+                1,
+                1,
+                3,
+                2,
+                1,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                3,
+                2,
+                2,
+                5,
+                1,
+                5,
+                1,
+                2,
+                1,
+                1,
+                3,
+                5,
+                2,
+                1,
+                5,
+                4,
+                2,
+                4,
+                2,
+                1,
+                2,
+                1,
+                3,
+                2,
+                2,
+                5,
+                5,
+                2,
+                5,
+                5,
+                5,
+                4,
+                4,
+                2,
+                5,
+                4,
+                3,
+                2,
+                3,
+                3,
+                4,
+                3,
+                2,
+                4,
+                4,
+                4,
+                2,
+                5,
+                2,
+                1,
+                3,
+                4,
+                4,
+                1,
+                1,
+                4,
+                5,
+                3,
+                4,
+                3,
+                3,
+                4,
+                2,
+                5,
+                3,
+                3,
+                2,
+                4,
+                2,
+                1,
+                4,
+                3,
+                2,
+                2,
+                2,
+                3,
+                1,
+                2,
+                3,
+                4,
+                7,
+                3,
+                2,
+                4,
+                2,
+                6,
+                4,
+                3,
+                1,
+                6,
+                5,
+                4,
+                1,
+                2,
+                3,
+                2,
+                3,
+                3,
+                2,
+                2,
+                2,
+                2,
+                1,
+                4,
+                2,
+                2,
+                3,
+                1,
+                2,
+                1,
+                7,
+                3,
+                4,
+                5,
+                4,
+                3,
+                1,
+                4,
+                7,
+                1,
+                1,
+                4,
+                5,
+                2,
+                2,
+                1,
+                1,
+                1,
+                5,
+                2,
+                2,
+                1,
+                4,
+                3,
+                2,
+                6,
+                2
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Date"
+            ],
+            "selected": {
+                "Date": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "2021-01-01T00:00:00",
+                "2021-01-02T00:00:00",
+                "2021-01-03T00:00:00",
+                "2021-01-04T00:00:00",
+                "2021-01-05T00:00:00",
+                "2021-01-06T00:00:00",
+                "2021-01-07T00:00:00",
+                "2021-01-08T00:00:00",
+                "2021-01-09T00:00:00",
+                "2021-01-10T00:00:00",
+                "2021-01-11T00:00:00",
+                "2021-01-12T00:00:00",
+                "2021-01-13T00:00:00",
+                "2021-01-14T00:00:00",
+                "2021-01-15T00:00:00",
+                "2021-01-16T00:00:00",
+                "2021-01-17T00:00:00",
+                "2021-01-18T00:00:00",
+                "2021-01-19T00:00:00",
+                "2021-01-21T00:00:00",
+                "2021-01-22T00:00:00",
+                "2021-01-23T00:00:00",
+                "2021-01-24T00:00:00",
+                "2021-01-25T00:00:00",
+                "2021-01-26T00:00:00",
+                "2021-01-27T00:00:00",
+                "2021-01-28T00:00:00",
+                "2021-01-29T00:00:00",
+                "2021-01-30T00:00:00",
+                "2021-01-31T00:00:00",
+                "2021-02-02T00:00:00",
+                "2021-02-03T00:00:00",
+                "2021-02-04T00:00:00",
+                "2021-02-05T00:00:00",
+                "2021-02-06T00:00:00",
+                "2021-02-07T00:00:00",
+                "2021-02-08T00:00:00",
+                "2021-02-09T00:00:00",
+                "2021-02-10T00:00:00",
+                "2021-02-11T00:00:00",
+                "2021-02-12T00:00:00",
+                "2021-02-13T00:00:00",
+                "2021-02-14T00:00:00",
+                "2021-02-15T00:00:00",
+                "2021-02-16T00:00:00",
+                "2021-02-17T00:00:00",
+                "2021-02-18T00:00:00",
+                "2021-02-19T00:00:00",
+                "2021-02-20T00:00:00",
+                "2021-02-21T00:00:00",
+                "2021-02-22T00:00:00",
+                "2021-02-23T00:00:00",
+                "2021-02-24T00:00:00",
+                "2021-02-25T00:00:00",
+                "2021-02-26T00:00:00",
+                "2021-02-27T00:00:00",
+                "2021-03-01T00:00:00",
+                "2021-03-02T00:00:00",
+                "2021-03-04T00:00:00",
+                "2021-03-05T00:00:00",
+                "2021-03-06T00:00:00",
+                "2021-03-07T00:00:00",
+                "2021-03-08T00:00:00",
+                "2021-03-09T00:00:00",
+                "2021-03-10T00:00:00",
+                "2021-03-11T00:00:00",
+                "2021-03-12T00:00:00",
+                "2021-03-14T00:00:00",
+                "2021-03-16T00:00:00",
+                "2021-03-17T00:00:00",
+                "2021-03-18T00:00:00",
+                "2021-03-19T00:00:00",
+                "2021-03-20T00:00:00",
+                "2021-03-21T00:00:00",
+                "2021-03-22T00:00:00",
+                "2021-03-23T00:00:00",
+                "2021-03-24T00:00:00",
+                "2021-03-25T00:00:00",
+                "2021-03-26T00:00:00",
+                "2021-03-27T00:00:00",
+                "2021-03-28T00:00:00",
+                "2021-03-29T00:00:00",
+                "2021-03-30T00:00:00",
+                "2021-03-31T00:00:00",
+                "2021-04-01T00:00:00",
+                "2021-04-02T00:00:00",
+                "2021-04-03T00:00:00",
+                "2021-04-04T00:00:00",
+                "2021-04-05T00:00:00",
+                "2021-04-06T00:00:00",
+                "2021-04-08T00:00:00",
+                "2021-04-09T00:00:00",
+                "2021-04-10T00:00:00",
+                "2021-04-11T00:00:00",
+                "2021-04-12T00:00:00",
+                "2021-04-13T00:00:00",
+                "2021-04-14T00:00:00",
+                "2021-04-15T00:00:00",
+                "2021-04-16T00:00:00",
+                "2021-04-17T00:00:00",
+                "2021-04-18T00:00:00",
+                "2021-04-19T00:00:00",
+                "2021-04-20T00:00:00",
+                "2021-04-21T00:00:00",
+                "2021-04-22T00:00:00",
+                "2021-04-23T00:00:00",
+                "2021-04-24T00:00:00",
+                "2021-04-25T00:00:00",
+                "2021-04-26T00:00:00",
+                "2021-04-27T00:00:00",
+                "2021-04-28T00:00:00",
+                "2021-04-29T00:00:00",
+                "2021-04-30T00:00:00",
+                "2021-05-01T00:00:00",
+                "2021-05-02T00:00:00",
+                "2021-05-03T00:00:00",
+                "2021-05-04T00:00:00",
+                "2021-05-05T00:00:00",
+                "2021-05-06T00:00:00",
+                "2021-05-07T00:00:00",
+                "2021-05-08T00:00:00",
+                "2021-05-09T00:00:00",
+                "2021-05-11T00:00:00",
+                "2021-05-12T00:00:00",
+                "2021-05-13T00:00:00",
+                "2021-05-14T00:00:00",
+                "2021-05-15T00:00:00",
+                "2021-05-16T00:00:00",
+                "2021-05-17T00:00:00",
+                "2021-05-18T00:00:00",
+                "2021-05-19T00:00:00",
+                "2021-05-20T00:00:00",
+                "2021-05-21T00:00:00",
+                "2021-05-22T00:00:00",
+                "2021-05-23T00:00:00",
+                "2021-05-24T00:00:00",
+                "2021-05-25T00:00:00",
+                "2021-05-26T00:00:00",
+                "2021-05-27T00:00:00",
+                "2021-05-28T00:00:00",
+                "2021-05-30T00:00:00",
+                "2021-05-31T00:00:00",
+                "2021-06-01T00:00:00",
+                "2021-06-02T00:00:00",
+                "2021-06-03T00:00:00",
+                "2021-06-04T00:00:00",
+                "2021-06-05T00:00:00",
+                "2021-06-06T00:00:00",
+                "2021-06-07T00:00:00",
+                "2021-06-08T00:00:00",
+                "2021-06-09T00:00:00",
+                "2021-06-10T00:00:00",
+                "2021-06-11T00:00:00",
+                "2021-06-12T00:00:00",
+                "2021-06-13T00:00:00",
+                "2021-06-14T00:00:00",
+                "2021-06-15T00:00:00",
+                "2021-06-16T00:00:00",
+                "2021-06-17T00:00:00",
+                "2021-06-18T00:00:00",
+                "2021-06-20T00:00:00",
+                "2021-06-21T00:00:00",
+                "2021-06-22T00:00:00",
+                "2021-06-23T00:00:00",
+                "2021-06-24T00:00:00",
+                "2021-06-25T00:00:00",
+                "2021-06-26T00:00:00",
+                "2021-06-27T00:00:00",
+                "2021-06-28T00:00:00",
+                "2021-06-29T00:00:00",
+                "2021-06-30T00:00:00",
+                "2021-07-01T00:00:00",
+                "2021-07-02T00:00:00",
+                "2021-07-03T00:00:00",
+                "2021-07-04T00:00:00",
+                "2021-07-05T00:00:00",
+                "2021-07-06T00:00:00",
+                "2021-07-07T00:00:00",
+                "2021-07-08T00:00:00",
+                "2021-07-09T00:00:00",
+                "2021-07-10T00:00:00",
+                "2021-07-11T00:00:00",
+                "2021-07-13T00:00:00",
+                "2021-07-14T00:00:00",
+                "2021-07-15T00:00:00",
+                "2021-07-16T00:00:00",
+                "2021-07-17T00:00:00",
+                "2021-07-18T00:00:00",
+                "2021-07-19T00:00:00",
+                "2021-07-20T00:00:00",
+                "2021-07-21T00:00:00",
+                "2021-07-22T00:00:00",
+                "2021-07-23T00:00:00",
+                "2021-07-24T00:00:00",
+                "2021-07-25T00:00:00",
+                "2021-07-26T00:00:00",
+                "2021-07-27T00:00:00",
+                "2021-07-28T00:00:00",
+                "2021-07-29T00:00:00",
+                "2021-07-30T00:00:00",
+                "2021-07-31T00:00:00",
+                "2021-08-01T00:00:00",
+                "2021-08-02T00:00:00",
+                "2021-08-03T00:00:00",
+                "2021-08-05T00:00:00",
+                "2021-08-07T00:00:00",
+                "2021-08-08T00:00:00",
+                "2021-08-09T00:00:00",
+                "2021-08-10T00:00:00",
+                "2021-08-11T00:00:00",
+                "2021-08-12T00:00:00",
+                "2021-08-13T00:00:00",
+                "2021-08-14T00:00:00",
+                "2021-08-15T00:00:00",
+                "2021-08-16T00:00:00",
+                "2021-08-17T00:00:00",
+                "2021-08-18T00:00:00",
+                "2021-08-19T00:00:00",
+                "2021-08-20T00:00:00",
+                "2021-08-21T00:00:00",
+                "2021-08-22T00:00:00",
+                "2021-08-23T00:00:00",
+                "2021-08-24T00:00:00",
+                "2021-08-25T00:00:00",
+                "2021-08-27T00:00:00",
+                "2021-08-28T00:00:00",
+                "2021-08-29T00:00:00",
+                "2021-08-30T00:00:00",
+                "2021-08-31T00:00:00",
+                "2021-09-01T00:00:00",
+                "2021-09-02T00:00:00",
+                "2021-09-03T00:00:00",
+                "2021-09-04T00:00:00",
+                "2021-09-05T00:00:00",
+                "2021-09-06T00:00:00",
+                "2021-09-07T00:00:00",
+                "2021-09-08T00:00:00",
+                "2021-09-09T00:00:00",
+                "2021-09-10T00:00:00",
+                "2021-09-11T00:00:00",
+                "2021-09-12T00:00:00",
+                "2021-09-13T00:00:00",
+                "2021-09-14T00:00:00",
+                "2021-09-15T00:00:00",
+                "2021-09-16T00:00:00",
+                "2021-09-17T00:00:00",
+                "2021-09-18T00:00:00",
+                "2021-09-19T00:00:00",
+                "2021-09-21T00:00:00",
+                "2021-09-22T00:00:00",
+                "2021-09-23T00:00:00",
+                "2021-09-24T00:00:00",
+                "2021-09-25T00:00:00",
+                "2021-09-26T00:00:00",
+                "2021-09-27T00:00:00",
+                "2021-09-29T00:00:00",
+                "2021-09-30T00:00:00",
+                "2021-10-01T00:00:00",
+                "2021-10-03T00:00:00",
+                "2021-10-05T00:00:00",
+                "2021-10-06T00:00:00",
+                "2021-10-08T00:00:00",
+                "2021-10-09T00:00:00",
+                "2021-10-10T00:00:00",
+                "2021-10-11T00:00:00",
+                "2021-10-12T00:00:00",
+                "2021-10-13T00:00:00",
+                "2021-10-14T00:00:00",
+                "2021-10-15T00:00:00",
+                "2021-10-16T00:00:00",
+                "2021-10-17T00:00:00",
+                "2021-10-19T00:00:00",
+                "2021-10-20T00:00:00",
+                "2021-10-21T00:00:00",
+                "2021-10-22T00:00:00",
+                "2021-10-23T00:00:00",
+                "2021-10-24T00:00:00",
+                "2021-10-25T00:00:00",
+                "2021-10-26T00:00:00",
+                "2021-10-27T00:00:00",
+                "2021-10-28T00:00:00",
+                "2021-10-29T00:00:00",
+                "2021-10-30T00:00:00",
+                "2021-10-31T00:00:00",
+                "2021-11-01T00:00:00",
+                "2021-11-02T00:00:00",
+                "2021-11-03T00:00:00",
+                "2021-11-04T00:00:00",
+                "2021-11-05T00:00:00",
+                "2021-11-06T00:00:00",
+                "2021-11-07T00:00:00",
+                "2021-11-09T00:00:00",
+                "2021-11-10T00:00:00",
+                "2021-11-11T00:00:00",
+                "2021-11-12T00:00:00",
+                "2021-11-13T00:00:00",
+                "2021-11-14T00:00:00",
+                "2021-11-15T00:00:00",
+                "2021-11-16T00:00:00",
+                "2021-11-17T00:00:00",
+                "2021-11-18T00:00:00",
+                "2021-11-19T00:00:00",
+                "2021-11-20T00:00:00",
+                "2021-11-21T00:00:00",
+                "2021-11-22T00:00:00",
+                "2021-11-23T00:00:00",
+                "2021-11-24T00:00:00",
+                "2021-11-25T00:00:00",
+                "2021-11-26T00:00:00",
+                "2021-11-27T00:00:00",
+                "2021-11-28T00:00:00",
+                "2021-11-29T00:00:00",
+                "2021-11-30T00:00:00",
+                "2021-12-01T00:00:00",
+                "2021-12-02T00:00:00",
+                "2021-12-03T00:00:00",
+                "2021-12-04T00:00:00",
+                "2021-12-05T00:00:00",
+                "2021-12-06T00:00:00",
+                "2021-12-07T00:00:00",
+                "2021-12-08T00:00:00",
+                "2021-12-09T00:00:00",
+                "2021-12-10T00:00:00",
+                "2021-12-11T00:00:00",
+                "2021-12-12T00:00:00",
+                "2021-12-13T00:00:00",
+                "2021-12-14T00:00:00",
+                "2021-12-15T00:00:00",
+                "2021-12-16T00:00:00",
+                "2021-12-17T00:00:00",
+                "2021-12-18T00:00:00",
+                "2021-12-21T00:00:00",
+                "2021-12-22T00:00:00",
+                "2021-12-23T00:00:00",
+                "2021-12-24T00:00:00",
+                "2021-12-25T00:00:00",
+                "2021-12-26T00:00:00",
+                "2021-12-27T00:00:00",
+                "2021-12-28T00:00:00",
+                "2021-12-29T00:00:00",
+                "2021-12-30T00:00:00",
+                "2021-12-31T00:00:00",
+                "2022-01-01T00:00:00",
+                "2022-05-10T00:00:00",
+                "2022-05-11T00:00:00"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "Number of Orders Per Day",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": [
+        {
+            "show": true,
+            "type": "slider",
+            "realtime": true,
+            "start": 0,
+            "end": 5,
+            "orient": "horizontal",
+            "zoomLock": false,
+            "filterMode": "filter"
+        }
+    ]
+};
+        chart_f0fe57474ad8486b909bc293cc19a382.setOption(option_f0fe57474ad8486b909bc293cc19a382);
+    </script>
+                <div id="c413be63169d4302aeb49cd823f63b9d" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_c413be63169d4302aeb49cd823f63b9d = echarts.init(
+            document.getElementById('c413be63169d4302aeb49cd823f63b9d'), 'white', {renderer: 'canvas'});
+        var option_c413be63169d4302aeb49cd823f63b9d = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "Price",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "CHINA",
+                    33.21
+                ],
+                [
+                    "Cardiff",
+                    88683.38
+                ],
+                [
+                    "Edinburgh",
+                    83181.23
+                ],
+                [
+                    "Leeds",
+                    80452.34
+                ],
+                [
+                    "London",
+                    88565.73
+                ],
+                [
+                    "Oxford",
+                    80667.63
+                ],
+                [
+                    "Sheffield",
+                    81378.88
+                ],
+                [
+                    "sheffield",
+                    887.0
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "type": "last"
+                    }
+                ]
+            },
+            "zlevel": 0,
+            "z": 0
+        },
+        {
+            "type": "line",
+            "name": "Quantity",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "CHINA",
+                    15
+                ],
+                [
+                    "Cardiff",
+                    85091
+                ],
+                [
+                    "Edinburgh",
+                    80764
+                ],
+                [
+                    "Leeds",
+                    75356
+                ],
+                [
+                    "London",
+                    89344
+                ],
+                [
+                    "Oxford",
+                    77794
+                ],
+                [
+                    "Sheffield",
+                    76707
+                ],
+                [
+                    "sheffield",
+                    133
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "type": "last"
+                    }
+                ]
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Price",
+                "Quantity"
+            ],
+            "selected": {
+                "Price": true,
+                "Quantity": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "CHINA",
+                "Cardiff",
+                "Edinburgh",
+                "Leeds",
+                "London",
+                "Oxford",
+                "Sheffield",
+                "sheffield"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "Regional Quantity&Price",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_c413be63169d4302aeb49cd823f63b9d.setOption(option_c413be63169d4302aeb49cd823f63b9d);
+    </script>
+                <div id="4f5cf24cc06b4f40844380bed05d3691" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_4f5cf24cc06b4f40844380bed05d3691 = echarts.init(
+            document.getElementById('4f5cf24cc06b4f40844380bed05d3691'), 'white', {renderer: 'canvas'});
+        var option_4f5cf24cc06b4f40844380bed05d3691 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "Meal",
+                    "value": 184
+                },
+                {
+                    "name": "Meat",
+                    "value": 176
+                },
+                {
+                    "name": "Vegetable",
+                    "value": 167
+                },
+                {
+                    "name": "Drink",
+                    "value": 162
+                },
+                {
+                    "name": "Snack",
+                    "value": 159
+                },
+                {
+                    "name": "Spices",
+                    "value": 156
+                },
+                {
+                    "name": "chocolate",
+                    "value": 2
+                },
+                {
+                    "name": "Fruit",
+                    "value": 1
+                }
+            ],
+            "radius": [
+                "30%",
+                "75%"
+            ],
+            "center": [
+                "35%",
+                "50%"
+            ],
+            "roseType": "area",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Meal",
+                "Meat",
+                "Vegetable",
+                "Drink",
+                "Snack",
+                "Spices",
+                "chocolate",
+                "Fruit"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "Distribution of Food Type",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_4f5cf24cc06b4f40844380bed05d3691.setOption(option_4f5cf24cc06b4f40844380bed05d3691);
+    </script>
+                <div id="ef72ff0ce5ce4d2d8963629bafa328fc" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_ef72ff0ce5ce4d2d8963629bafa328fc = echarts.init(
+            document.getElementById('ef72ff0ce5ce4d2d8963629bafa328fc'), 'white', {renderer: 'canvas'});
+        var option_ef72ff0ce5ce4d2d8963629bafa328fc = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "bar",
+            "name": "Price Value",
+            "legendHoverLink": true,
+            "data": [
+                482.2363282312925,
+                521.0372327586207,
+                524.3642906976744,
+                493.44180252100836,
+                638.38,
+                82.21916666666667
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "Number of Products",
+            "legendHoverLink": true,
+            "data": [
+                1407.5119047619048,
+                1564.0,
+                1261.9302325581396,
+                1422.4235294117648,
+                1325.0,
+                74.0
+            ],
+            "showBackground": false,
+            "barMinHeight": 0,
+            "barCategoryGap": "20%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Price Value",
+                "Number of Products"
+            ],
+            "selected": {
+                "Price Value": true,
+                "Number of Products": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "2021Q1",
+                "2021Q2",
+                "2021Q3",
+                "2021Q4",
+                "2022Q1"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "Quarterly Prices and Quantities",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_ef72ff0ce5ce4d2d8963629bafa328fc.setOption(option_ef72ff0ce5ce4d2d8963629bafa328fc);
+    </script>
+                        <style>
+            .fl-table {
+                margin: 20px;
+                border-radius: 5px;
+                font-size: 12px;
+                border: none;
+                border-collapse: collapse;
+                max-width: 100%;
+                white-space: nowrap;
+                word-break: keep-all;
+            }
+
+            .fl-table th {
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .fl-table tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+            }
+
+            .fl-table tr:hover td {
+                background: #00d1b2;
+                color: #F8F8F8;
+            }
+
+            .fl-table td, .fl-table th {
+                border-style: none;
+                border-top: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-bottom: 3px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                padding: .5em .55em;
+                font-size: 15px;
+            }
+
+            .fl-table td {
+                border-style: none;
+                font-size: 15px;
+                vertical-align: center;
+                border-bottom: 1px solid #dbdbdb;
+                border-left: 1px solid #dbdbdb;
+                border-right: 1px solid #dbdbdb;
+                height: 30px;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: #F8F8F8;
+            }
+        </style>
+        <div id="5d02ba8d4ae648c9b77b91f2a3a00fa6" class="chart-container" style="">
+            <p class="title" style="font-size: 18px; font-weight:bold;" > Client Information Sheet</p>
+            <p class="subtitle" style="font-size: 12px;" > </p>
+            <table class="fl-table">
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Tel_Number</th>
+            <th>Gender</th>
+            <th>Type</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fang Xiuying</td>
+            <td>Fang Xiuying</td>
+            <td>fxiuying10@outlook.com</td>
+            <td>584</td>
+            <td>F</td>
+            <td>MdveouBzYf</td>
+            <td>982.0</td>
+        </tr>
+        <tr>
+            <td>Ono Yuto</td>
+            <td>Ono Yuto</td>
+            <td>yutoon@gmail.com</td>
+            <td>965</td>
+            <td>M</td>
+            <td>k5jcn83jx2</td>
+            <td>62.0</td>
+        </tr>
+        <tr>
+            <td>Xia Xiuying</td>
+            <td>Xia Xiuying</td>
+            <td>xiuying224@gmail.com</td>
+            <td>765</td>
+            <td>F</td>
+            <td>2oD9OxE5zt</td>
+            <td>894.0</td>
+        </tr>
+        <tr>
+            <td>Sherry Stephens</td>
+            <td>Sherry Stephens</td>
+            <td>sherrystephens@gmail.com</td>
+            <td>902</td>
+            <td>F</td>
+            <td>Dz2bzqd7Ck</td>
+            <td>123123.0</td>
+        </tr>
+        <tr>
+            <td>Shao Xiaoming</td>
+            <td>Shao Xiaoming</td>
+            <td>xiaoming55@gmail.com</td>
+            <td>719</td>
+            <td>M</td>
+            <td>g6oCNAqFrR</td>
+            <td>534.0</td>
+        </tr>
+        <tr>
+            <td>Marjorie Flores</td>
+            <td>Marjorie Flores</td>
+            <td>marjorieflores@icloud.com</td>
+            <td>1</td>
+            <td>F</td>
+            <td>cf4CftlJkD</td>
+            <td>188.0</td>
+        </tr>
+        <tr>
+            <td>Sugiyama Yuna</td>
+            <td>Sugiyama Yuna</td>
+            <td>sugiyamayuna@gmail.com</td>
+            <td>568</td>
+            <td>F</td>
+            <td>LREelcMrk8</td>
+            <td>843.0</td>
+        </tr>
+        <tr>
+            <td>Hsuan Hiu Tung</td>
+            <td>Hsuan Hiu Tung</td>
+            <td>hiutunghsuan@gmail.com</td>
+            <td>163</td>
+            <td>F</td>
+            <td>xe868wN6zL</td>
+            <td>260.0</td>
+        </tr>
+        <tr>
+            <td>Yang Zhiyuan</td>
+            <td>Yang Zhiyuan</td>
+            <td>yzhiyuan10@icloud.com</td>
+            <td>21</td>
+            <td>M</td>
+            <td>MTOXP1WoRG</td>
+            <td>690.0</td>
+        </tr>
+        <tr>
+            <td>Douglas Robertson</td>
+            <td>Douglas Robertson</td>
+            <td>robertson01@icloud.com</td>
+            <td>937</td>
+            <td>M</td>
+            <td>J0EZTGS7bb</td>
+            <td>319.0</td>
+        </tr>
+        <tr>
+            <td>Feng Lan</td>
+            <td>Feng Lan</td>
+            <td>lanfe1@gmail.com</td>
+            <td>931</td>
+            <td>F</td>
+            <td>LKVq28swvP</td>
+            <td>241.0</td>
+        </tr>
+        <tr>
+            <td>Zhu Ziyi</td>
+            <td>Zhu Ziyi</td>
+            <td>zhzi@gmail.com</td>
+            <td>357</td>
+            <td>M</td>
+            <td>pZT1vq9P5F</td>
+            <td>815.0</td>
+        </tr>
+        <tr>
+            <td>Tamura Kasumi</td>
+            <td>Tamura Kasumi</td>
+            <td>kasumita@gmail.com</td>
+            <td>443</td>
+            <td>M</td>
+            <td>5TPMMH60QR</td>
+            <td>587.0</td>
+        </tr>
+        <tr>
+            <td>Saito Kaito</td>
+            <td>Saito Kaito</td>
+            <td>kaitos6@mail.com</td>
+            <td>915</td>
+            <td>M</td>
+            <td>euyQUC5wMZ</td>
+            <td>953.0</td>
+        </tr>
+        <tr>
+            <td>Song Rui</td>
+            <td>Song Rui</td>
+            <td>songru@icloud.com</td>
+            <td>901</td>
+            <td>M</td>
+            <td>2JgXy7zyFd</td>
+            <td>263.0</td>
+        </tr>
+        <tr>
+            <td>Chen Lu</td>
+            <td>Chen Lu</td>
+            <td>lchen103@outlook.com</td>
+            <td>786</td>
+            <td>F</td>
+            <td>X6izd9EI1E</td>
+            <td>151.0</td>
+        </tr>
+        <tr>
+            <td>Ti Ling Ling</td>
+            <td>Ti Ling Ling</td>
+            <td>llti@icloud.com</td>
+            <td>652</td>
+            <td>F</td>
+            <td>2HfPwYSb49</td>
+            <td>602.0</td>
+        </tr>
+        <tr>
+            <td>Yau Siu Wai</td>
+            <td>Yau Siu Wai</td>
+            <td>swya@icloud.com</td>
+            <td>804</td>
+            <td>F</td>
+            <td>jGZgDrR8UC</td>
+            <td>518.0</td>
+        </tr>
+        <tr>
+            <td>Yue Ka Ling</td>
+            <td>Yue Ka Ling</td>
+            <td>klyue@icloud.com</td>
+            <td>387</td>
+            <td>F</td>
+            <td>ZWRtOPCJX4</td>
+            <td>42.0</td>
+        </tr>
+        <tr>
+            <td>Fang Jiehong</td>
+            <td>Fang Jiehong</td>
+            <td>jiehongfang@outlook.com</td>
+            <td>564</td>
+            <td>M</td>
+            <td>JJOWGWu0xf</td>
+            <td>917.0</td>
+        </tr>
+        <tr>
+            <td>Kaneko Ren</td>
+            <td>Kaneko Ren</td>
+            <td>kanekoren306@gmail.com</td>
+            <td>381</td>
+            <td>F</td>
+            <td>NLRogWHDoC</td>
+            <td>239.0</td>
+        </tr>
+        <tr>
+            <td>Feng Zitao</td>
+            <td>Feng Zitao</td>
+            <td>zitaofeng1125@yahoo.com</td>
+            <td>23</td>
+            <td>M</td>
+            <td>og7JRrQFa5</td>
+            <td>615.0</td>
+        </tr>
+        <tr>
+            <td>Shing Wai Han</td>
+            <td>Shing Wai Han</td>
+            <td>waihansh@gmail.com</td>
+            <td>124</td>
+            <td>F</td>
+            <td>jaQN1oPY5N</td>
+            <td>621.0</td>
+        </tr>
+        <tr>
+            <td>Ng Sai Wing</td>
+            <td>Ng Sai Wing</td>
+            <td>ng1956@outlook.com</td>
+            <td>329</td>
+            <td>M</td>
+            <td>2AjbpyRdV0</td>
+            <td>308.0</td>
+        </tr>
+        <tr>
+            <td>Nakamura Riku</td>
+            <td>Nakamura Riku</td>
+            <td>rikunak@gmail.com</td>
+            <td>835</td>
+            <td>M</td>
+            <td>9TfT16y7jn</td>
+            <td>281.0</td>
+        </tr>
+        <tr>
+            <td>Hou Lu</td>
+            <td>Hou Lu</td>
+            <td>hlu911@gmail.com</td>
+            <td>909</td>
+            <td>F</td>
+            <td>bhCU3utb89</td>
+            <td>890.0</td>
+        </tr>
+        <tr>
+            <td>Ishikawa Minato</td>
+            <td>Ishikawa Minato</td>
+            <td>ishikawami@outlook.com</td>
+            <td>66</td>
+            <td>M</td>
+            <td>1t65zeOmW4</td>
+            <td>522.0</td>
+        </tr>
+        <tr>
+            <td>Ku Wai Han</td>
+            <td>Ku Wai Han</td>
+            <td>kuwh1990@outlook.com</td>
+            <td>429</td>
+            <td>F</td>
+            <td>yMb1ectPUk</td>
+            <td>775.0</td>
+        </tr>
+        <tr>
+            <td>Xie Anqi</td>
+            <td>Xie Anqi</td>
+            <td>xieanqi@hotmail.com</td>
+            <td>400</td>
+            <td>F</td>
+            <td>ox6E59Qjfv</td>
+            <td>3442.0</td>
+        </tr>
+        <tr>
+            <td>Fujita Takuya</td>
+            <td>Fujita Takuya</td>
+            <td>takufuj@hotmail.com</td>
+            <td>90</td>
+            <td>M</td>
+            <td>fQ3lILtqzg</td>
+            <td>119.0</td>
+        </tr>
+        <tr>
+            <td>Koo Fu Shing</td>
+            <td>Koo Fu Shing</td>
+            <td>fsko@icloud.com</td>
+            <td>858</td>
+            <td>M</td>
+            <td>PYkXHWtOiJ</td>
+            <td>181.0</td>
+        </tr>
+        <tr>
+            <td>Justin Patterson</td>
+            <td>Justin Patterson</td>
+            <td>patjustin42@icloud.com</td>
+            <td>107</td>
+            <td>M</td>
+            <td>uJ6p6Ob4o4</td>
+            <td>360.0</td>
+        </tr>
+        <tr>
+            <td>Pak Chun Yu</td>
+            <td>Pak Chun Yu</td>
+            <td>pakcy4@icloud.com</td>
+            <td>875</td>
+            <td>M</td>
+            <td>wLL6I5sRxP</td>
+            <td>844.0</td>
+        </tr>
+        <tr>
+            <td>Andrea Vargas</td>
+            <td>Andrea Vargas</td>
+            <td>vara@hotmail.com</td>
+            <td>273</td>
+            <td>F</td>
+            <td>2FOQnH5h7X</td>
+            <td>375.0</td>
+        </tr>
+        <tr>
+            <td>Gladys Perez</td>
+            <td>Gladys Perez</td>
+            <td>gp6@outlook.com</td>
+            <td>434</td>
+            <td>F</td>
+            <td>LSLOO5RSEF</td>
+            <td>732.0</td>
+        </tr>
+        <tr>
+            <td>Paula Allen</td>
+            <td>Paula Allen</td>
+            <td>allenp@outlook.com</td>
+            <td>349</td>
+            <td>F</td>
+            <td>G1fQGiRH6w</td>
+            <td>776.0</td>
+        </tr>
+        <tr>
+            <td>Takahashi Hina</td>
+            <td>Takahashi Hina</td>
+            <td>hinat4@gmail.com</td>
+            <td>582</td>
+            <td>F</td>
+            <td>AiLB9BZuue</td>
+            <td>124.0</td>
+        </tr>
+        <tr>
+            <td>Gloria Stone</td>
+            <td>Gloria Stone</td>
+            <td>stoneg6@icloud.com</td>
+            <td>643</td>
+            <td>F</td>
+            <td>Wyo3j7sDjP</td>
+            <td>448.0</td>
+        </tr>
+        <tr>
+            <td>Peggy Reynolds</td>
+            <td>Peggy Reynolds</td>
+            <td>peggyr@mail.com</td>
+            <td>218</td>
+            <td>F</td>
+            <td>KiOSniYquE</td>
+            <td>706.0</td>
+        </tr>
+        <tr>
+            <td>Cheung Ling Ling</td>
+            <td>Cheung Ling Ling</td>
+            <td>lingling2@outlook.com</td>
+            <td>541</td>
+            <td>F</td>
+            <td>ZJ8o2FC5lO</td>
+            <td>792.0</td>
+        </tr>
+        <tr>
+            <td>Nishimura Shino</td>
+            <td>Nishimura Shino</td>
+            <td>shinoni@gmail.com</td>
+            <td>960</td>
+            <td>F</td>
+            <td>tBIlHbPzEL</td>
+            <td>305.0</td>
+        </tr>
+        <tr>
+            <td>Au Sai Wing</td>
+            <td>Au Sai Wing</td>
+            <td>saiwau@outlook.com</td>
+            <td>85</td>
+            <td>M</td>
+            <td>u2A5DSuj2G</td>
+            <td>581.0</td>
+        </tr>
+        <tr>
+            <td>Su Shihan</td>
+            <td>Su Shihan</td>
+            <td>su3@gmail.com</td>
+            <td>689</td>
+            <td>F</td>
+            <td>xdGSoBX065</td>
+            <td>982.0</td>
+        </tr>
+        <tr>
+            <td>Arai Rin</td>
+            <td>Arai Rin</td>
+            <td>arai6@yahoo.com</td>
+            <td>598</td>
+            <td>F</td>
+            <td>evoRnU9Mja</td>
+            <td>313.0</td>
+        </tr>
+        <tr>
+            <td>Deng Jialun</td>
+            <td>Deng Jialun</td>
+            <td>dengji1029@gmail.com</td>
+            <td>945</td>
+            <td>M</td>
+            <td>nyU6f4NlBd</td>
+            <td>151.0</td>
+        </tr>
+        <tr>
+            <td>Ren Jialun</td>
+            <td>Ren Jialun</td>
+            <td>jialun9@icloud.com</td>
+            <td>291</td>
+            <td>M</td>
+            <td>sQIxPJJboj</td>
+            <td>724.0</td>
+        </tr>
+        <tr>
+            <td>Katherine James</td>
+            <td>Katherine James</td>
+            <td>katherine1027@gmail.com</td>
+            <td>60</td>
+            <td>F</td>
+            <td>PmRZCl3dsq</td>
+            <td>724.0</td>
+        </tr>
+        <tr>
+            <td>Danielle Wood</td>
+            <td>Danielle Wood</td>
+            <td>wooddan7@outlook.com</td>
+            <td>29</td>
+            <td>F</td>
+            <td>NoIj99g48M</td>
+            <td>784.0</td>
+        </tr>
+        <tr>
+            <td>He Xiaoming</td>
+            <td>He Xiaoming</td>
+            <td>he2@gmail.com</td>
+            <td>889</td>
+            <td>M</td>
+            <td>UHz1TdkqD5</td>
+            <td>887.0</td>
+        </tr>
+        <tr>
+            <td>Kinoshita Ayato</td>
+            <td>Kinoshita Ayato</td>
+            <td>aykinoshita1@hotmail.com</td>
+            <td>730</td>
+            <td>M</td>
+            <td>EeHe0SPfK5</td>
+            <td>64.0</td>
+        </tr>
+        <tr>
+            <td>Yu Xiuying</td>
+            <td>Yu Xiuying</td>
+            <td>yxi@outlook.com</td>
+            <td>414</td>
+            <td>F</td>
+            <td>PDO6scwiRl</td>
+            <td>339.0</td>
+        </tr>
+        <tr>
+            <td>Cao Lan</td>
+            <td>Cao Lan</td>
+            <td>lcao@gmail.com</td>
+            <td>296</td>
+            <td>F</td>
+            <td>ogGded7Any</td>
+            <td>496.0</td>
+        </tr>
+        <tr>
+            <td>He Lu</td>
+            <td>He Lu</td>
+            <td>lhe6@hotmail.com</td>
+            <td>848</td>
+            <td>F</td>
+            <td>r78eCBJPGi</td>
+            <td>858.0</td>
+        </tr>
+        <tr>
+            <td>Nakajima Misaki</td>
+            <td>Nakajima Misaki</td>
+            <td>nakmisa4@gmail.com</td>
+            <td>228</td>
+            <td>F</td>
+            <td>ZUOyA7zIu3</td>
+            <td>878.0</td>
+        </tr>
+        <tr>
+            <td>Dale Long</td>
+            <td>Dale Long</td>
+            <td>dalelong6@icloud.com</td>
+            <td>566</td>
+            <td>M</td>
+            <td>Gb2wvRSWmX</td>
+            <td>873.0</td>
+        </tr>
+        <tr>
+            <td>Meng Zhennan</td>
+            <td>Meng Zhennan</td>
+            <td>mzhennan@outlook.com</td>
+            <td>478</td>
+            <td>M</td>
+            <td>siWB5HYPsI</td>
+            <td>720.0</td>
+        </tr>
+        <tr>
+            <td>Sato Kenta</td>
+            <td>Sato Kenta</td>
+            <td>kentasato@outlook.com</td>
+            <td>724</td>
+            <td>M</td>
+            <td>UuLsU8Xu9c</td>
+            <td>899.0</td>
+        </tr>
+        <tr>
+            <td>Christine James</td>
+            <td>Christine James</td>
+            <td>chrisj@icloud.com</td>
+            <td>255</td>
+            <td>F</td>
+            <td>tfU6gX2nWM</td>
+            <td>647.0</td>
+        </tr>
+        <tr>
+            <td>Nishimura Minato</td>
+            <td>Nishimura Minato</td>
+            <td>minan@icloud.com</td>
+            <td>398</td>
+            <td>M</td>
+            <td>9leICyBVh7</td>
+            <td>929.0</td>
+        </tr>
+        <tr>
+            <td>Murata Ayano</td>
+            <td>Murata Ayano</td>
+            <td>muratay@outlook.com</td>
+            <td>257</td>
+            <td>F</td>
+            <td>TfMzwPVeVz</td>
+            <td>164.0</td>
+        </tr>
+        <tr>
+            <td>Wada Mio</td>
+            <td>Wada Mio</td>
+            <td>wadami@icloud.com</td>
+            <td>651</td>
+            <td>F</td>
+            <td>D3H6bXg8ll</td>
+            <td>843.0</td>
+        </tr>
+        <tr>
+            <td>Anne Lee</td>
+            <td>Anne Lee</td>
+            <td>lee10@gmail.com</td>
+            <td>34</td>
+            <td>F</td>
+            <td>JbmIGgRlVl</td>
+            <td>633.0</td>
+        </tr>
+        <tr>
+            <td>Hara Eita</td>
+            <td>Hara Eita</td>
+            <td>eitahara10@outlook.com</td>
+            <td>48</td>
+            <td>F</td>
+            <td>8oXVQTS5Kp</td>
+            <td>927.0</td>
+        </tr>
+        <tr>
+            <td>Sun Lu</td>
+            <td>Sun Lu</td>
+            <td>lusun8@outlook.com</td>
+            <td>657</td>
+            <td>F</td>
+            <td>EkeItlinx0</td>
+            <td>346.0</td>
+        </tr>
+        <tr>
+            <td>Ogawa Mitsuki</td>
+            <td>Ogawa Mitsuki</td>
+            <td>ogamits@icloud.com</td>
+            <td>708</td>
+            <td>F</td>
+            <td>AODljiVJgv</td>
+            <td>549.0</td>
+        </tr>
+        <tr>
+            <td>Kong Ziyi</td>
+            <td>Kong Ziyi</td>
+            <td>zikong16@mail.com</td>
+            <td>193</td>
+            <td>M</td>
+            <td>njTK610GqT</td>
+            <td>288.0</td>
+        </tr>
+        <tr>
+            <td>Jia Lu</td>
+            <td>Jia Lu</td>
+            <td>lujia1122@mail.com</td>
+            <td>686</td>
+            <td>F</td>
+            <td>U6qn37ll1z</td>
+            <td>377.0</td>
+        </tr>
+        <tr>
+            <td>Catherine Hunt</td>
+            <td>Catherine Hunt</td>
+            <td>catherinehu4@hotmail.com</td>
+            <td>913</td>
+            <td>F</td>
+            <td>MGfE3SUsiy</td>
+            <td>124.0</td>
+        </tr>
+        <tr>
+            <td>Gao Zitao</td>
+            <td>Gao Zitao</td>
+            <td>zitao713@gmail.com</td>
+            <td>711</td>
+            <td>M</td>
+            <td>6chYTpZSxB</td>
+            <td>162.0</td>
+        </tr>
+        <tr>
+            <td>Nakayama Yamato</td>
+            <td>Nakayama Yamato</td>
+            <td>yamatonakayama528@outlook.com</td>
+            <td>194</td>
+            <td>M</td>
+            <td>R3ZvcCvhO4</td>
+            <td>402.0</td>
+        </tr>
+        <tr>
+            <td>Joe Davis</td>
+            <td>Joe Davis</td>
+            <td>dajoe728@outlook.com</td>
+            <td>408</td>
+            <td>M</td>
+            <td>DjcVkpT4KH</td>
+            <td>661.0</td>
+        </tr>
+        <tr>
+            <td>Suzuki Hana</td>
+            <td>Suzuki Hana</td>
+            <td>hanas527@icloud.com</td>
+            <td>898</td>
+            <td>F</td>
+            <td>eS6KczNJ3Y</td>
+            <td>746.0</td>
+        </tr>
+        <tr>
+            <td>Carl Meyer</td>
+            <td>Carl Meyer</td>
+            <td>carlme@yahoo.com</td>
+            <td>272888888</td>
+            <td>M</td>
+            <td>PovDnUbpEt</td>
+            <td>948.0</td>
+        </tr>
+        <tr>
+            <td>Yue Wing Fat</td>
+            <td>Yue Wing Fat</td>
+            <td>wingfatyue@gmail.com</td>
+            <td>759</td>
+            <td>M</td>
+            <td>oSqPjt8xQJ</td>
+            <td>499.0</td>
+        </tr>
+        <tr>
+            <td>Yang Zitao</td>
+            <td>Yang Zitao</td>
+            <td>yangzitao@gmail.com</td>
+            <td>773</td>
+            <td>M</td>
+            <td>24kF2Gy6lq</td>
+            <td>544.0</td>
+        </tr>
+        <tr>
+            <td>Wada Hikari</td>
+            <td>Wada Hikari</td>
+            <td>wadhik@mail.com</td>
+            <td>65</td>
+            <td>F</td>
+            <td>7dXfkZQ1et</td>
+            <td>100.0</td>
+        </tr>
+        <tr>
+            <td>Jiang Xiuying</td>
+            <td>Jiang Xiuying</td>
+            <td>jiangxiuying@outlook.com</td>
+            <td>740</td>
+            <td>F</td>
+            <td>bdDw6xOuLc</td>
+            <td>449.0</td>
+        </tr>
+        <tr>
+            <td>Cui Jiehong</td>
+            <td>Cui Jiehong</td>
+            <td>jiehongcui@icloud.com</td>
+            <td>632</td>
+            <td>M</td>
+            <td>rEsQrm9w4n</td>
+            <td>996.0</td>
+        </tr>
+        <tr>
+            <td>Duan Xiaoming</td>
+            <td>Duan Xiaoming</td>
+            <td>duanxiaom@gmail.com</td>
+            <td>709</td>
+            <td>M</td>
+            <td>V7GRQKm7th</td>
+            <td>30.0</td>
+        </tr>
+        <tr>
+            <td>Danny Flores</td>
+            <td>Danny Flores</td>
+            <td>danfl2018@gmail.com</td>
+            <td>298</td>
+            <td>M</td>
+            <td>Y7n2lmZadm</td>
+            <td>937.0</td>
+        </tr>
+        <tr>
+            <td>Helen Reynolds</td>
+            <td>Helen Reynolds</td>
+            <td>helenre@outlook.com</td>
+            <td>801</td>
+            <td>F</td>
+            <td>XQbjK0W60m</td>
+            <td>104.0</td>
+        </tr>
+        <tr>
+            <td>Shimada Kazuma</td>
+            <td>Shimada Kazuma</td>
+            <td>shimkazu@mail.com</td>
+            <td>868</td>
+            <td>M</td>
+            <td>UpXlBR8FVc</td>
+            <td>701.0</td>
+        </tr>
+        <tr>
+            <td>Fujiwara Sara</td>
+            <td>Fujiwara Sara</td>
+            <td>sara85@outlook.com</td>
+            <td>783</td>
+            <td>F</td>
+            <td>n73TvY6H0L</td>
+            <td>395.0</td>
+        </tr>
+        <tr>
+            <td>Tan Yuning</td>
+            <td>Tan Yuning</td>
+            <td>yuning7@gmail.com</td>
+            <td>347</td>
+            <td>M</td>
+            <td>4zPF2zbJCy</td>
+            <td>367.0</td>
+        </tr>
+        <tr>
+            <td>Murakami Yuna</td>
+            <td>Murakami Yuna</td>
+            <td>mury@outlook.com</td>
+            <td>644</td>
+            <td>F</td>
+            <td>ilcAlNdMkC</td>
+            <td>130.0</td>
+        </tr>
+        <tr>
+            <td>Monica Reed</td>
+            <td>Monica Reed</td>
+            <td>reemonica@mail.com</td>
+            <td>477</td>
+            <td>F</td>
+            <td>6rJqsCYSyE</td>
+            <td>743.0</td>
+        </tr>
+        <tr>
+            <td>Tang Ka Ling</td>
+            <td>Tang Ka Ling</td>
+            <td>tangkaling@outlook.com</td>
+            <td>549</td>
+            <td>F</td>
+            <td>326yfBxe6D</td>
+            <td>371.0</td>
+        </tr>
+        <tr>
+            <td>Jerry Bailey</td>
+            <td>Jerry Bailey</td>
+            <td>baileyjerry@yahoo.com</td>
+            <td>223</td>
+            <td>M</td>
+            <td>NqWNn98SHB</td>
+            <td>442.0</td>
+        </tr>
+        <tr>
+            <td>Yamada Itsuki</td>
+            <td>Yamada Itsuki</td>
+            <td>yamada927@yahoo.com</td>
+            <td>809</td>
+            <td>M</td>
+            <td>LcqdkVsGzd</td>
+            <td>464.0</td>
+        </tr>
+        <tr>
+            <td>Xiang Xiaoming</td>
+            <td>Xiang Xiaoming</td>
+            <td>xiangxiaom@outlook.com</td>
+            <td>975</td>
+            <td>M</td>
+            <td>qdkq3AUt80</td>
+            <td>59.0</td>
+        </tr>
+        <tr>
+            <td>Chung Ho Yin</td>
+            <td>Chung Ho Yin</td>
+            <td>chunhy2@hotmail.com</td>
+            <td>394</td>
+            <td>M</td>
+            <td>TaX4TB19Su</td>
+            <td>993.0</td>
+        </tr>
+        <tr>
+            <td>Pang Fat</td>
+            <td>Pang Fat</td>
+            <td>fatpan@yahoo.com</td>
+            <td>71</td>
+            <td>M</td>
+            <td>UjLBnNvohI</td>
+            <td>877.0</td>
+        </tr>
+        <tr>
+            <td>Sato Kasumi</td>
+            <td>Sato Kasumi</td>
+            <td>sato56@outlook.com</td>
+            <td>314</td>
+            <td>M</td>
+            <td>Rx8VzN9hhv</td>
+            <td>929.0</td>
+        </tr>
+        <tr>
+            <td>Sato Momoka</td>
+            <td>Sato Momoka</td>
+            <td>satomomoka@gmail.com</td>
+            <td>81</td>
+            <td>F</td>
+            <td>rvUGqAhd98</td>
+            <td>72.0</td>
+        </tr>
+        <tr>
+            <td>Sugawara Mai</td>
+            <td>Sugawara Mai</td>
+            <td>sugawmai@gmail.com</td>
+            <td>150</td>
+            <td>F</td>
+            <td>vcGcgbJP9T</td>
+            <td>27.0</td>
+        </tr>
+        <tr>
+            <td>Larry Wells</td>
+            <td>Larry Wells</td>
+            <td>larry1002@hotmail.com</td>
+            <td>184</td>
+            <td>M</td>
+            <td>RX150H8tkg</td>
+            <td>861.0</td>
+        </tr>
+        <tr>
+            <td>Meng Tak Wah</td>
+            <td>Meng Tak Wah</td>
+            <td>twm@yahoo.com</td>
+            <td>802</td>
+            <td>M</td>
+            <td>81Y4PvFPf4</td>
+            <td>841.0</td>
+        </tr>
+        <tr>
+            <td>Yamaguchi Ren</td>
+            <td>Yamaguchi Ren</td>
+            <td>yamaguchi12@outlook.com</td>
+            <td>793</td>
+            <td>F</td>
+            <td>xd6OKhhGa7</td>
+            <td>408.0</td>
+        </tr>
+        <tr>
+            <td>Chung Chung Yin</td>
+            <td>Chung Chung Yin</td>
+            <td>chungyinchung@outlook.com</td>
+            <td>277</td>
+            <td>M</td>
+            <td>bFiPySEqcE</td>
+            <td>72.0</td>
+        </tr>
+        <tr>
+            <td>Cheung On Kay</td>
+            <td>Cheung On Kay</td>
+            <td>okcheung@icloud.com</td>
+            <td>755</td>
+            <td>F</td>
+            <td>9Ed5MryagA</td>
+            <td>722.0</td>
+        </tr>
+    </tbody>
+</table>
+        </div>
+
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

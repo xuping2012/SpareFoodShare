@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SpareFoodShare</title>
+  <!-- ico -->
+  <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- JS -->
+  <script src="{% static 'main.js' %}"></script> 
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/c250f59e99.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta property="og:title" content="SpareFoodShare"/>
+  <meta property="og:description" content="Share your Spare Food today!"/>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+  <div class="container-fluid">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="{% url 'index' %}#title">spareFoodShare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}#title">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'shop' %}#title">Shop</a>
+        </li>
+          <li class="nav-item">
+              <!-- <a class="nav-link" href="upload.html">Share</a> -->
+              <a class="btn btn-lg btn-primary" href="{% url 'upload' %}.html">Share</a>
+          </li>
+      </ul>
+    </div>
+    </nav>
+
+
+  </section>
+
+
+  <!-- Features -->
+
+<section class="white-section" id="payment">
+    <div class="container-fluid">
+        <div class="payment-container">
+            <div class="payment-item">
+                <div class = "payment-form-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1156.050643227773!2d-1.4795422707408714!3d53.38171612949427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879788020127157%3A0x31e00ebdb379d999!2sSir%20Frederick%20Mappin%20Building!5e0!3m2!1sen!2suk!4v1648158824738!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    {% for food in fooded %}  
+                    <a href="{% url 'payment' food.pk %}" class="btn btn-lg btn-success" style="margin-left: auto">Next</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="payment-item">
+            </div>
+            <div class="payment-item">
+              {% for food in fooded %}
+                <h4>Summary
+                </h4>
+                <hr>
+                <p>{{ food.foodname }}</p>
+                <hr>
+                <p>subtotal: £ {{ food.price }}</p>
+                <p>taxes: £ 0.00</p>
+                <p>discount: £ 0.00</p>
+                <hr>
+                <p>Total: <span class="price" style="color:black"><b>£ {{ food.price }}</b></span></p>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="About">
+    <div class="container-fluid">
+
+      <i class="fab fa-twitter foot-icon"></i>
+      <i class="fab fa-facebook-f foot-icon"></i>
+      <i class="fab fa-instagram foot-icon"></i>
+      <i class="fas fa-envelope foot-icon"></i>
+
+      <p>© Copyright 2022 spareFoodShare</p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>

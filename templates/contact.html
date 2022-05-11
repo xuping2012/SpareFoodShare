@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SpareFoodShare</title>
+  <!-- ico -->
+  <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- JS -->
+ 
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/c250f59e99.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta property="og:title" content="SpareFoodShare"/>
+  <meta property="og:description" content="Share your Spare Food today!"/>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+  <div class="container-fluid">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="{% url 'index' %}#title">spareFoodShare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}#title">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'shop' %}#title">Shop</a>
+        </li>
+          <li class="nav-item">
+              <!-- <a class="nav-link" href="upload.html">Share</a> -->
+              <a class="btn btn-lg btn-primary" href="{% url 'upload' %}">Share</a>
+          </li>
+      </ul>
+    </div>
+    </nav>
+
+
+  </section>
+
+
+  <!-- Features -->
+
+<section class="white-section" id="payment">
+    <h1>Contact The Seller</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+</section>
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="About">
+    <div class="container-fluid">
+
+      <i class="fab fa-twitter foot-icon"></i>
+      <i class="fab fa-facebook-f foot-icon"></i>
+      <i class="fab fa-instagram foot-icon"></i>
+      <i class="fas fa-envelope foot-icon"></i>
+
+      <p>© Copyright 2022 spareFoodShare</p>
+
+    </div>
+
+  </footer>
+
+  <script src="{% static 'main.js' %}"></script>  
+</body>
+
+</html>

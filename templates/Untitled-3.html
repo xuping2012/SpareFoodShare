@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title></title>
+	<style type="text/css">
+			.c {
+				color: red;
+			}
+ 
+			#nav {
+				position: fixed;
+				width: 100%;
+				height: auto;
+				background: #ffc;
+				overflow-y: auto;
+				min-height: 60px;
+				line-height: 60px;
+			}
+ 
+			#p {
+				margin-bottom: 50rem;
+			}
+ 
+			#p div {
+				height: 30rem;
+			}
+		</style>
+</head>
+	<body>
+		<div id="nav">
+			<a id="a11" href="#a1" class="smooth c">书籍目录</a>
+			<a id="a22" href="#a2" class="smooth">作品试读</a>
+			<a id="a33" href="#a3" class="smooth">购买须知</a>
+			<a id="a44" href="#a4" class="smooth">注意事项</a>
+			<a id="a55" href="#a5" class="smooth">用户点评</a>
+		</div>
+		<div id="p">
+			<div id="a1">书籍目录</div>
+			<div id="a2">作品试读</div>
+			<div id="a3">购买须知</div>
+			<div id="a4">注意事项</div>
+			<div id="a5">用户点评</div>
+		</div>
+ 
+ 
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://www.zhangxinxu.com/study/js/jquery.anchor.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(window).scroll(function() {
+					//为页面添加页面滚动监听事件
+					var wst = $(window).scrollTop() //滚动条距离顶端值
+					for (i = 1; i < 6; i++) { //加循环
+						if ($("#a" + i).offset().top <= wst) { //判断滚动条位置
+							$('#nav a').removeClass("c"); //清除c类
+							$("#a" + i + i).addClass("c"); //给当前导航加c类
+						}
+					}
+				})
+				$('#nav a').click(function() {
+					$('#nav a').removeClass("c");
+					$(this).addClass("c");
+				});
+			});
+			$(".smooth").zxxAnchor({
+				anchortag: "href"
+			});
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>SpareFoodShare</title>
+  <!-- ico -->
+  <link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- JS -->
+  <script src="{% static 'main.js' %}"></script> 
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/c250f59e99.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta property="og:title" content="SpareFoodShare"/>
+  <meta property="og:description" content="Share your Spare Food today!"/>
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+  <div class="container-fluid">
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="{% url 'home' %}">spareFoodShare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}#title">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}#About">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'shop' %}#title">Shop</a>
+        </li>
+          <li class="nav-item">
+            <a class="btn btn-lg btn-primary" href="{% url 'upload' %}">Share</a>
+          </li>
+      </ul>
+    </div>
+    </nav>
+
+</div>
+</section>
+
+<section class="white-section" id="product">
+  <div class="product-container">
+      {% for food in fooded %}
+          <div class="product-img">
+              <img class="product-image" src="{{ food.picture }}" alt="{{ food.picture }}">
+          </div>
+          <div></div>
+          <div class="product-desc">
+              <h1>{{ food.foodname }}</h1>
+              <h2>£ {{ food.price }}</h2>
+              <h3>Expires: {{ food.expireddate }}</h3>
+              <h5>Seller: {{ food.userid.firstname }} {{ food.userid.lastname }}</h5>
+              <hr>
+              <p>{{ food.description }}</p>
+              <hr>
+              <a type="button" class="btn btn-lg btn-success product-btn" href="{% url 'collection' food.pk %}">Collect</a>
+              <a type="button" class="btn btn-lg btn-secondary product-btn" href="{% url 'contact' food.pk%}">Message Seller</a>
+          </div>
+      {% endfor %}
+  </div>
+</section>
+<hr>
+<section class="white-section" id="similar">
+  <h2 style="text-align: left; margin-left: 3%">Similar Products</h3>
+  <div class="row">
+      {% for i in foods %}
+      <div class="sim-image">
+      <a href="{% url 'product' i.pk %}">
+              <img class="shop2-image" src="{{ i.picture }}" alt="{{ food.picture }}">
+              <p class="white-text">{{ i.foodname }}</p>
+              <p class="white-text">£ {{ i.price }}</p>
+      <a>
+      </div>
+      {% endfor %}
+
+  </div>
+
+</section>
+  <!-- Footer -->
+
+  <footer class="white-section" id="About">
+    <div class="container-fluid">
+
+      <i class="fab fa-twitter foot-icon"></i>
+      <i class="fab fa-facebook-f foot-icon"></i>
+      <i class="fab fa-instagram foot-icon"></i>
+      <i class="fas fa-envelope foot-icon"></i>
+
+      <p>© Copyright 2022 spareFoodShare</p>
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
