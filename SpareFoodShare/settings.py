@@ -89,10 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 默认
         'NAME': 'foodforshare1',  # 连接的数据库
-        'HOST': '192.168.2.213',  # mysql的ip地址
+        'HOST': '192.168.2.1',  # mysql的ip地址
         'PORT': 3306,  # mysql的端口
         'USER': 'root',  # mysql的用户名
-        'PASSWORD': 'NbQNJwPjpOwQKDppsj5yneWR'  # mysql的密码：pdP2PEoOZSeiDrm6T280RE6k
+        'PASSWORD': 'xxxx'  # mysql的密码：xxxxx
     }
 }
 
